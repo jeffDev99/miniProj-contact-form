@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Contact form</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-wrapper">
+        <h1 class="form-title">Contact Us</h1>
+        <form action="" method="get" class="form" id="contactForm">
+          <div class="grid-2col">
+            <div class="form-input-wrapper">
+              <label for="firstname" class="form-input-wrapper__label">First Name *</label>
+              <input type="text" id="firstnameInp" name="firstname" class="form-input-wrapper__input" />
+              <span class="msg" id="firstnameMsg">This field is required </span>
+            </div>
+            <div class="form-input-wrapper">
+              <label for="lastname" class="form-input-wrapper__label">Last Name *</label>
+              <input type="text" id="lastnameInp" name="lastname" class="form-input-wrapper__input" />
+              <span class="msg" id="lastnameMsg">This field is required </span>
+            </div>
+          </div>
+          <div class="form-input-wrapper">
+            <label for="email" class="form-input-wrapper__label">email *</label>
+            <input type="text" id="email" name="email" class="form-input-wrapper__input" />
+            <span class="msg" id="emailValidateMsg">Please enter a valid email address</span>
+          </div>
+          <label for="QueryType" class="form-input-wrapper__label">Query Type *</label>
+          <div class="grid-2col">
+            <label class="radio-container"
+              >General Enquiry
+              <input type="radio" name="QueryType" class="QueryType" value="General Enquiry" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="radio-container"
+              >Support Request
+              <input type="radio" name="QueryType" class="QueryType" value="Support Request" />
+              <span class="checkmark"></span>
+            </label>
+          </div>
+          <span class="msg" id="QueryTypeMsg">Please select a query</span>
+          <div class="form-input-wrapper">
+            <label for="message" class="form-input-wrapper__label">Message *</label>
+            <textarea name="message" id="message" class="form-input-wrapper__input form-input-wrapper__input--textarea"></textarea>
+            <span class="msg" id="messageMsg"> This field is required</span>
+          </div>
+          <label class="checkbox-container"> <input type="checkbox" id="policyCheck" name="policy"/> I consent to being contacted by the team <span class="checkmark-chk"></span> </label>
+          <span class="msg" id="checkboxMsg"> To submit this form, please consent to being contacted </span>
+          <div class="form-input-wrapper">
+            <input type="submit" class="form-input-wrapper__btn" id="submitBtn" value="submit" placeholder="type Message" />
+          </div>
+        </form>
+        <!-- Submit Message Sent! Thanks for completing the form. We'll
+        be in touch soon! -->
+      </div>
+    </div>
+    <div class="modal" id="modalSent">
+      <h2 class="modal-title"><i class="far fa-check-circle modal-icon"></i> <strong>Message Sent!</strong></h2>
+      <p class="modal-text">Thanks for completing the form. We'll be in touch soon!</p>
+    </div>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
